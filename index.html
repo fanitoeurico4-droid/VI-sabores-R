@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Área do restaurante</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1 id="nomeTopo">Área do restaurante</h1>
+    <p id="estadoTopo" class="sub"></p>
+  </div>
+  <button id="btnAberto" class="toggle" aria-pressed="true" hidden>Aberto</button>
+</header>
+<nav class="tabs" role="tablist" hidden>
+  <button data-tab="encomendas" class="on">Encomendas <span id="cntEnc" class="badge"></span></button>
+  <button data-tab="reservas">Reservas <span id="cntRes" class="badge"></span></button>
+  <button data-tab="menu">Menu</button>
+  <button data-tab="perfil">Perfil</button>
+</nav>
+<main>
+  <section id="encomendas"></section>
+  <section id="reservas" hidden></section>
+  <section id="menu" hidden></section>
+  <section id="perfil" hidden></section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="geo.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

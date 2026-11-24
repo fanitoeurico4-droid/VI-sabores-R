@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Área do motoboy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div><h1 id="tit">Motoboy</h1><p id="sub" class="sub"></p></div>
+  <button id="btnDisp" class="toggle" aria-pressed="true" hidden>Disponível</button>
+</header>
+<nav class="tabs" id="tabs" hidden>
+  <button data-tab="disponiveis" class="on">Disponíveis <span id="cntDisp" class="badge"></span></button>
+  <button data-tab="curso">Em curso <span id="cntCurso" class="badge"></span></button>
+  <button data-tab="ganhos">Ganhos</button>
+</nav>
+<main id="app"></main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="geo.js"></script>
+<script src="motoboy.js"></script>
+</body>
+</html>

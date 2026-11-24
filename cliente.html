@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Encomendar comida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1 id="nomeTopo">Restaurante</h1>
+    <p id="infoTopo" class="sub"></p>
+  </div>
+  <a class="toggle" href="index.html" style="text-decoration:none">Sou restaurante</a>
+</header>
+<nav class="tabs" role="tablist">
+  <button data-tab="cardapio" class="on">Menu</button>
+  <button data-tab="reservar">Reservar mesa</button>
+  <button data-tab="pedidos">Os meus pedidos <span id="cntPed" class="badge"></span></button>
+</nav>
+<main>
+  <section id="cardapio"></section>
+  <section id="reservar" hidden></section>
+  <section id="pedidos" hidden></section>
+</main>
+<div id="carrinhoBar" class="carrinho" hidden></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="geo.js"></script>
+<script src="cliente.js"></script>
+</body>
+</html>
