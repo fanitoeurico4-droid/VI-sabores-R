@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restaurantes perto de ti</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div><h1>Restaurantes</h1><p id="sub" class="sub">Escolhe onde queres encomendar</p></div>
+  <button id="gps" class="toggle">Perto de mim</button>
+</header>
+<main>
+  <div id="mapaLista" style="height:260px;border-radius:10px;margin-bottom:14px"></div>
+  <div id="lista"></div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="config.js"></script>
+<script src="geo.js"></script>
+<script src="descobrir.js"></script>
+</body>
+</html>
