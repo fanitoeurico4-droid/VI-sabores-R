@@ -1,7 +1,9 @@
-// Cola aqui os dados do teu projeto Supabase (Project Settings → API → Project URL e chave "anon public").
-const SUPABASE_URL ="https://xxkricnsfvqribinnnns.supabase.co/rest/v1/";
+const SUPABASE_URL = "https://xxkricnsfvqribinnnns.supabase.co/rest/v1/";
 const SUPABASE_KEY = "sb_publishable_0Vr0nKNk6yBV1zfUQSiNxg_uqfXIKUw";
-if (SUPABASE_URL.includes("SEU-PROJETO")) {
-  document.body.innerHTML = '<p style="padding:24px;font-family:sans-serif">Falta preencher o <b>config.js</b> com o URL e a chave do Supabase. Vê o README.</p>';
-} else {
-  window.sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+try {
+  if (SUPABASE_URL.includes("COLA-AQUI") || SUPABASE_KEY.includes("COLA-AQUI")) throw new Error("O URL ou a chave ainda não foram preenchidos.");
+  if (!window.supabase) throw new Error("A biblioteca do Supabase não carregou.");
+  window.sb = window.supabase.createClient(SUPABASE_URL.trim(), SUPABASE_KEY.trim());
+} catch (e) {
+  alert("Erro no config.js: " + e.message);
+}
